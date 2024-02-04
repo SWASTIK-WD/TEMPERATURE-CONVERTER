@@ -2,14 +2,10 @@ const celciusField = document.querySelector("#celcius");
 const degree = document.querySelector("#degree");
 const convertBtn = document.querySelector("#convert-btn");
 const tempType = document.querySelector("#temp-type");
-
-
 window.addEventListener("load", () => {
     degree.value = "";
     celciusField.innerHTML="";
 })
-
-
 convertBtn.addEventListener("click", (e) => {
     e.preventDefault();
     convertToCelcius();
@@ -19,7 +15,6 @@ convertBtn.addEventListener("click", (e) => {
          convertBtn.innerHTML = "<span>Convert</span>";
     },1000)
 })
-
 function convertToCelcius()
 {
           let inputvalue = degree.value;
@@ -30,13 +25,11 @@ function convertToCelcius()
             celciusField.innerHTML = `${fahrenheitToCelcius.toFixed(3)} &deg;
             c`;
           }
-
           else if(tempType.value === "kelvin")
           {
             const kelvinToCelcius = inputvalue - 273.15;
             celciusField.innerHTML = `${kelvinToCelcius.toFixed(3)} &deg;
             c`;
-            
           }
         },1200)
-    }
+}
